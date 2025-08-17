@@ -9,16 +9,195 @@
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <title>Sayed Mohaiminul Haque</title>
 
-    <link rel="stylesheet" href="Css/style.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .fixed-top {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1030;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: black;
+        }
+
+        .banner-container {
+            background-image: linear-gradient(#B6FFFA, #687EFF);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 56px;
+            /* Adjust for fixed navbar */
+        }
+
+        .banner-column {
+            background-color: rgba(182, 255, 250, 0.9);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .banner-column ul li {
+            font-size: 2.5rem;
+        }
+
+        .banner-column ul li a {
+            color: black;
+            transition: font-size 0.3s ease;
+        }
+
+        .banner-column ul li a:hover {
+            font-size: 3rem;
+        }
+
+        .home-container,
+        .skill-container,
+        .education-container {
+            background-image: linear-gradient(#98E4FF, #80B3FF);
+        }
+
+        .services-container,
+        .project-container,
+        .gallery-container {
+            background-image: linear-gradient(#687FFF, #81B4FF);
+        }
+
+        .profile-img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+        }
+
+        .card {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: bisque;
+            border-radius: 10px;
+            min-height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card p {
+            font-size: 1.25rem;
+        }
+
+        .skill-img {
+            height: 50px;
+            width: 50px;
+            object-fit: contain;
+        }
+
+        .project-img {
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .gallery-container {
+            padding-bottom: 40px;
+        }
+
+        .g-p {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .box {
+            margin: 10px;
+            height: auto;
+            width: 250px;
+        }
+
+        .ibox img {
+            height: 150px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .contact-container {
+            background-color: rgb(1, 1, 45);
+            color: white;
+        }
+
+        .footer1 {
+            margin-bottom: 2rem;
+        }
+
+        .footer1 ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .footer1 ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer1 ul li a:hover {
+            color: #98E4FF;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 767.98px) {
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+
+            .profile-img {
+                height: 200px;
+                width: 200px;
+            }
+
+            .project-img {
+                height: auto;
+                width: 100%;
+            }
+
+            .footer1 {
+                text-align: center;
+            }
+
+            .footer1 ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .footer1 ul li {
+                margin: 0 5px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top"
-        style="background-color: #687EFF;">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #687EFF;">
         <a class="navbar-brand font-weight-bolder" href="#banner">Sayed Mohaiminul Haque</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,10 +224,14 @@
                 <h6>Compititive Programmer & Web-Developer</h6>
                 <div class="social-links d-flex justify-content-center mt-3">
                     <ul class="list-unstyled d-flex">
-                        <li class="m-2"><a href="https://www.facebook.com/smhsiam32" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-                        <li class="m-2"><a href="https://bd.linkedin.com/in/sayed-mohaiminul-haque" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-                        <li class="m-2"><a href="https://twitter.com/smhsiam32" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a></li>
-                        <li class="m-2"><a href="https://github.com/sayedmohaiminulhaque" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                        <li class="m-2"><a href="https://www.facebook.com/smhsiam32" target="_blank"><i
+                                    class="fa-brands fa-facebook"></i></a></li>
+                        <li class="m-2"><a href="https://bd.linkedin.com/in/sayed-mohaiminul-haque" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i></a></li>
+                        <li class="m-2"><a href="https://twitter.com/smhsiam32" target="_blank"><i
+                                    class="fa-brands fa-square-x-twitter"></i></a></li>
+                        <li class="m-2"><a href="https://github.com/sayedmohaiminulhaque" target="_blank"><i
+                                    class="fa-brands fa-github"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -59,7 +242,8 @@
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-md-7 p-4">
-                    <h1 class="display-5 font-weight-bold">Hay,<br> I am Sayed Mohaiminul Haque, Competitive Programmer and Software Engineer.</h1>
+                    <h1 class="display-5 font-weight-bold">Hay,<br> I am Sayed Mohaiminul Haque, Competitive Programmer
+                        and Software Engineer.</h1>
                 </div>
                 <div class="col-md-5 p-4 text-center">
                     <img class="img-fluid rounded-circle profile-img" src="img/siam.jpg" alt="Sayed Mohaiminul Haque">
@@ -73,7 +257,11 @@
             <div class="row text-center mb-4">
                 <div class="col-12">
                     <h1>Services</h1>
-                    <marquee behavior="scroll" direction="left">Here is the services I am providing.</marquee>
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <div style="width: 30%;">
+                            <marquee behavior="scroll" direction="left">Here is the services I am providing.</marquee>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -106,7 +294,8 @@
                 </div>
                 <div class="col-10">
                     <div class="progress">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80"
+                            aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
             </div>
@@ -116,7 +305,8 @@
                 </div>
                 <div class="col-10">
                     <div class="progress">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="85"
+                            aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
             </div>
@@ -126,7 +316,19 @@
                 </div>
                 <div class="col-10">
                     <div class="progress">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar " role="progressbar" style="width: 50%" aria-valuenow="20"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+             <div class="row align-items-center mb-3">
+                <div class="col-2 text-center">
+                    <img class="img-fluid skill-img" src="img/logo/php_logo.png" alt="JavaScript">
+                </div>
+                <div class="col-10">
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="20"
+                            aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
             </div>
@@ -136,7 +338,8 @@
                 </div>
                 <div class="col-10">
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50"
+                            aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
             </div>
@@ -152,11 +355,22 @@
             </div>
             <div class="row mb-4 align-items-center">
                 <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
+                    <img class="img-fluid project-img" src="img/Project/Maplocation_-5a492a4e482c52003601ea25.jpg"
+                        alt="NEU Transport">
+                </div>
+                <div class="col-12 col-md-8">
+                    <h4>NEU Transport</h4>
+                    <p>This mobile application provides real-time location tracking for buses. I worked on the front-end of this project, using the Dart programming language and the Flutter framework.</p>
+                    <a href="" class="btn border-light">Github_Link</a>
+                </div>
+            </div>
+            <div class="row mb-4 align-items-center">
+                <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
                     <img class="img-fluid project-img" src="img/Project/download.jpg" alt="AirPlane Management System">
                 </div>
                 <div class="col-12 col-md-8">
                     <h4>AirPlane Management System</h4>
-                    <p>This is a normal management system where a user can buy, return, and update tickets. This is just an idea-type project that is completed with C++ language.</p>
+                    <p>I developed a ticket management system that allows users to purchase, cancel (return), and update ticket information. This is a conceptual project created using the C++ programming language.</p>
                     <a href="" class="btn border-light">Github_Link</a>
                 </div>
             </div>
@@ -166,20 +380,11 @@
                 </div>
                 <div class="col-12 col-md-8">
                     <h4>CGPA Calculator</h4>
-                    <p>This is a calculator by which a student can calculate his/her CGPA easily. This project is done by Assembly Language.</p>
+                    <p>A CGPA calculator was created using Assembly Language to help students easily calculate their CGPA.</p>
                     <a href="" class="btn border-light">Github_Link</a>
                 </div>
             </div>
-            <div class="row mb-4 align-items-center">
-                <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
-                    <img class="img-fluid project-img" src="img/Project/Maplocation_-5a492a4e482c52003601ea25.jpg" alt="SHU Transport">
-                </div>
-                <div class="col-12 col-md-8">
-                    <h4>SHU Transport</h4>
-                    <p>This is a mobile application. By this app, a user can find the live location of the bus. In this project, I was working for the front-end. We used Dart programming language and Flutter framework.</p>
-                    <a href="" class="btn border-light">Github_Link</a>
-                </div>
-            </div>
+            
         </div>
     </section>
 
@@ -196,25 +401,28 @@
                 </div>
                 <div class="col-12 col-md-8 text-center text-md-left">
                     <h4>Secondary School Certificate</h4>
-                    <p>I have passed my SSC exam from Trishal Government Nazrul Academy, Trishal, Mymensingh with G.P.A-5.00 (Dhaka Board).</p>
+                    <p>I have passed my SSC exam from Trishal Government Nazrul Academy, Trishal, Mymensingh with
+                        G.P.A-5.00 (Dhaka Board).</p>
                 </div>
             </div>
             <div class="row mb-4 align-items-center">
                 <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
-                    <img class="img-fluid project-img" src="img/education/download.png" alt="Higher Secondary School Certificate">
+                    <img class="img-fluid project-img" src="img/education/download.png"
+                        alt="Higher Secondary School Certificate">
                 </div>
                 <div class="col-12 col-md-8 text-center text-md-left">
                     <h4>Higher Secondary School Certificate</h4>
-                    <p>I have passed my HSC exam from Notredame College Mymensingh with G.P.A-5.00 (Mymensingh Board).</p>
+                    <p>I have passed my HSC exam from Notredame College Mymensingh with G.P.A-5.00 (Mymensingh Board).
+                    </p>
                 </div>
             </div>
             <div class="row mb-4 align-items-center">
                 <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
-                    <img class="img-fluid project-img" src="img/education/SHU-logo-HQ.jpg" alt="Bachelor of Science">
+                    <img class="img-fluid project-img" src="img/education/neu.jpg" alt="Bachelor of Science">
                 </div>
                 <div class="col-12 col-md-8 text-center text-md-left">
                     <h4>Bachelor of Science</h4>
-                    <p>My study in Sheikh Hasina University with subject Computer Science & Engineering and this is ongoing.</p>
+                    <p>I am a student at Netrokona University who has recently successfully completed all the examinations for my bachelor's degree. My CGPA up to the seventh semester was 3.60, and I am currently awaiting my final results.</p>
                 </div>
             </div>
         </div>
@@ -230,13 +438,116 @@
             <div class="row justify-content-center g-p">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 box text-center">
                     <div class="ibox">
-                        <img class="img-fluid" src="img/icpc2022/334564347_576263727997362_5286774006086272945_n.jpg" alt="">
+                        <img class="img-fluid" src="img/icpc2022/334564347_576263727997362_5286774006086272945_n.jpg"
+                            alt="">
                     </div>
                     <div class="name">
                         <p class="mt-2"><b>ICPC-2022</b></p>
                     </div>
                 </div>
+                
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 box text-center">
+                    <div class="ibox">
+                        <img class="img-fluid" src="img/icpc2022/334971336_158055843768150_4289211667433074489_n.jpg"
+                            alt="">
+                    </div>
+                    <div class="name">
+                        <p class="mt-2"><b>ICPC-2022</b></p>
+                    </div>
                 </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 box text-center">
+                    <div class="ibox">
+                        <img class="img-fluid" src="img/icpc2022/335478243_175237741948821_2925200053376405123_n.jpg"
+                            alt="">
+                    </div>
+                    <div class="name">
+                        <p class="mt-2"><b>ICPC-2022</b></p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 box text-center">
+                    <div class="ibox">
+                        <img class="img-fluid" src="img/icpc2022/Untitled design.jpg"
+                            alt="">
+                    </div>
+                    <div class="name">
+                        <p class="mt-2"><b>ICPC-2022</b></p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 box text-center">
+                    <div class="ibox">
+                        <img class="img-fluid" src="img/icpc2023/396958214_302329752575308_6409006422937017321_n.jpg"
+                            alt="">
+                    </div>
+                    <div class="name">
+                        <p class="mt-2"><b>ICPC-2023</b></p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 box text-center">
+                    <div class="ibox">
+                        <img class="img-fluid" src="img/icpc2023/398834831_3604421629833661_4859695387405249617_n.jpg"
+                            alt="">
+                    </div>
+                    <div class="name">
+                        <p class="mt-2"><b>ICPC-2023</b></p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 box text-center">
+                    <div class="ibox">
+                        <img class="img-fluid" src="img/icpc2023/398978464_3604421579833666_3981745608373255764_n.jpg"
+                            alt="">
+                    </div>
+                    <div class="name">
+                        <p class="mt-2"><b>ICPC-2023</b></p>
+                    </div>
+                </div>
+               
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 box text-center">
+                    <div class="ibox">
+                        <img class="img-fluid" src="img/sustcse/428605311_122125191260166557_6997052979971673955_n.jpg"
+                            alt="">
+                    </div>
+                    <div class="name">
+                        <p class="mt-2"><b>IUPC-SUST</b></p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 box text-center">
+                    <div class="ibox">
+                        <img class="img-fluid" src="img/sustcse/429487714_3677097899232700_5094211806086766938_n.jpg"
+                            alt="">
+                    </div>
+                    <div class="name">
+                        <p class="mt-2"><b>IUPC-SUST</b></p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 box text-center">
+                    <div class="ibox">
+                        <img class="img-fluid" src="img/icpc2024/1.jpeg"
+                            alt="">
+                    </div>
+                    <div class="name">
+                        <p class="mt-2"><b>ICPC-2024</b></p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 box text-center">
+                    <div class="ibox">
+                        <img class="img-fluid" src="img/icpc2024/2.jpeg"
+                            alt="">
+                    </div>
+                    <div class="name">
+                        <p class="mt-2"><b>ICPC-2024</b></p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 box text-center">
+                    <div class="ibox">
+                        <img class="img-fluid" src="img/icpc2024/3.jpeg"
+                            alt="">
+                    </div>
+                    <div class="name">
+                        <p class="mt-2"><b>ICPC-2024</b></p>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </section>
 
@@ -265,15 +576,20 @@
                         <li><a href="mailto:mohaiminul.shu.cse@gmail.com">mohaiminul.neu.cse@gmail.com</a></li>
                     </ul>
                     <ul class="list-unstyled d-flex">
-                        <li class="m-2"><a href="https://www.facebook.com/smhsiam32" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-                        <li class="m-2"><a href="https://www.linkedin.com/in/sayed-mohaiminul-haque/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-                        <li class="m-2"><a href="https://twitter.com/smhsiam32" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a></li>
-                        <li class="m-2"><a href="https://github.com/sayedmohaiminulhaque" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                        <li class="m-2"><a href="https://www.facebook.com/smhsiam32" target="_blank"><i
+                                    class="fa-brands fa-facebook"></i></a></li>
+                        <li class="m-2"><a href="https://www.linkedin.com/in/sayed-mohaiminul-haque/" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i></a></li>
+                        <li class="m-2"><a href="https://twitter.com/smhsiam32" target="_blank"><i
+                                    class="fa-brands fa-square-x-twitter"></i></a></li>
+                        <li class="m-2"><a href="https://github.com/sayedmohaiminulhaque" target="_blank"><i
+                                    class="fa-brands fa-github"></i></a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-md-3 footer1">
                     <b>About me</b> <br>
-                    <p>Competitive Programmer, Software Engineer and Web Developer With a Bachelor's in Computer Science and Engineering.</p>
+                    <p>Competitive Programmer, Software Engineer and Web Developer With a Bachelor's in Computer Science
+                        and Engineering.</p>
                 </div>
             </div>
         </div>
